@@ -1,21 +1,31 @@
 class Stack:
     def __init__(self):
-        pass
+        self.stack = []
+        
 
     def __len__(self):
-        pass
+        return len(self.stack)
+        
 
     def __bool__(self):
-        pass
+        return bool(self.stack)
+    
 
     def clear(self):
-        pass
+        self.stack = []
+        
 
     def push(self, item):
-        pass
+        self.stack.append(item)
+        
 
     def pop(self):
-        pass
+        return self.stack.pop()
+        
 
     def peek(self):
-        pass
+        if self.stack:
+            return self.stack[-1]
+        else:
+            return None
+    
