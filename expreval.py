@@ -34,6 +34,13 @@ class ExpressionEvaluator:
                 while stack and stack.peek() in operators and is_higher_precedence(stack.peek(), character):
                     output.append(stack.pop()) # Pops the higher prec operator from the stack and adds it to the output 
                 stack.push(character)
+            
+            elif character == '(':  # Left parenthesis
+                stack.push(character)
+            elif character == ')':  # Right parenthesis
+                while stack and stack.peek() != '(':
+                    output.append(stack.pop())
+                stack.pop()  # Remove the left parenthesis
 
         # Append remaining items from the stack to output
         while stack:
