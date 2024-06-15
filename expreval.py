@@ -5,6 +5,7 @@ class ExpressionEvaluator:
         self.output = [] #creating empty list to store output
         self.operators = {"+", "*"} #Defining operators
         
+        
 
     def parse(self, expression):
         stack = Stack()
@@ -17,7 +18,7 @@ class ExpressionEvaluator:
                     self.output.append(stack.pop())
                     stack.push(char)
                 else:
-                    stack.puch(char)
+                    stack.push(char)
 
         while stack:
             self.output.append(stack.pop)
