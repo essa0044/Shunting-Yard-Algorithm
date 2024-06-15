@@ -1,7 +1,7 @@
 from stack import Stack
 
 class ExpressionEvaluator:
-    def __init__(self, invert_precedence=False):
+    def __init__(self, invert_precedence=True):
         self.invert_precedence = invert_precedence
         
 
