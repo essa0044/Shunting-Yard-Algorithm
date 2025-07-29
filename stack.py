@@ -1,4 +1,4 @@
-class Stack: #wrote calculator logic
+class Stack: # wrote calculator logic
 
     def __init__(self):
         self.stack = []
